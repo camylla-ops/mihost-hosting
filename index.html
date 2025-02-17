@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
-    <!-- Configurações básicas de meta tags -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Título da página -->
-    <title>MIHOST</title>
-    <!-- Link para os ícones do Font Awesome -->
+    <title>MIHOST - Hospedagem Web</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -15,189 +12,186 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- Link para o arquivo de estilos CSS -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- Container principal de todo o conteúdo -->
     <div class="container">
-      <!-- Seção da Navbar -->
       <div class="navbar-container">
         <nav>
-          <!-- Logo com link para a página inicial -->
-          <a href="#">
+          <a href="#home">
             <img src="img/logo.png" alt="MIHOST" class="logo" />
           </a>
-          <!-- Menu de navegação -->
           <ul class="navbar-items">
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Preços</a>
-            </li>
-            <li>
-              <a href="#">Contato</a>
-            </li>
-            <!-- Botão de "Entrar" -->
-            <li>
-              <a href="#" class="default-btn">Entrar</a>
-            </li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#precos">Preços</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#" class="default-btn" onclick="alert('Área em desenvolvimento! 🚧')">Entrar</a></li>
           </ul>
         </nav>
       </div>
-      <!-- Conteúdo principal da página -->
+      
       <main>
-        <!-- Seção do banner principal -->
-        <div class="main-banner">
+        <!-- Seção Home -->
+        <div class="main-banner" id="home">
           <h1>MIHOST</h1>
           <p>Os melhores serviços para projetos de todos os tamanhos!</p>
         </div>
-        <!-- Seção de serviços -->
+
+        <!-- Seção Serviços -->
         <section class="services-container">
           <ul>
-            <!-- Serviço: Segurança -->
             <li>
               <i class="fas fa-shield-alt"></i>
               <h3>Segurança</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-                veritatis non, distinctio, dolor sapiente dolorum ab delectus
-                rem labore animi consequuntur quo nulla autem vitae in eligendi
-                cumque corrupti ipsum.
-              </p>
+              <p>Proteção avançada contra ameaças com monitoramento 24/7.</p>
             </li>
-            <!-- Serviço: Performance -->
             <li>
               <i class="fas fa-rocket"></i>
               <h3>Performance</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-                veritatis non, distinctio, dolor sapiente dolorum ab delectus
-                rem labore animi consequuntur quo nulla autem vitae in eligendi
-                cumque corrupti ipsum.
-              </p>
+              <p>Infraestrutura otimizada para carregamento ultrarrápido.</p>
             </li>
-            <!-- Serviço: Suporte 24/7 -->
             <li>
               <i class="fas fa-comments"></i>
               <h3>Suporte 24/7</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
-                veritatis non, distinctio, dolor sapiente dolorum ab delectus
-                rem labore animi consequuntur quo nulla autem vitae in eligendi
-                cumque corrupti ipsum.
-              </p>
+              <p>Equipe especializada disponível a qualquer momento.</p>
             </li>
           </ul>
         </section>
-        <!-- Seção de planos e preços -->
-        <section class="pricing-container">
+
+        <!-- Seção Preços -->
+        <section class="pricing-container" id="precos">
           <h2>Planos e Preços</h2>
-          <p>Selecione o plano que atende as suas necessidades</p>
+          <p>Selecione o plano ideal para seu projeto</p>
           <div class="plans-container">
+            
             <!-- Plano Básico -->
             <div class="plan">
               <ul>
                 <li class="price">R$15/mês</li>
                 <li class="plan-name">Básico</li>
-                <li>2GB de espaço</li>
-                <li>1 Subdomínios</li>
-                <li>25 contas de e-mail</li>
+                <li>2GB SSD</li>
+                <li>1 Subdomínio</li>
+                <li>25 E-mails</li>
                 <li>C-panel</li>
                 <li>Suporte 24/7</li>
-                <li class="plan-btn">Saber mais</li>
+                <li><button class="plan-btn" onclick="showPlanDetails('Básico')">Saber mais</button></li>
               </ul>
             </div>
+
             <!-- Plano Dedicado -->
             <div class="plan">
               <ul>
                 <li class="price">R$30/mês</li>
                 <li class="plan-name">Dedicado</li>
-                <li>5GB de espaço</li>
-                <li>10 Subdomínios</li>
-                <li>50 contas de e-mail</li>
+                <li>5GB SSD</li>
+                <li>5 Subdomínios</li>
+                <li>50 E-mails</li>
                 <li>C-panel</li>
-                <li>Suporte 24/7</li>
-                <li class="plan-btn">Saber mais</li>
+                <li>Suporte Prioritário</li>
+                <li><button class="plan-btn" onclick="showPlanDetails('Dedicado')">Saber mais</button></li>
               </ul>
             </div>
+
             <!-- Plano Dedicado Plus -->
             <div class="plan">
               <ul>
                 <li class="price recommended">R$50/mês</li>
                 <li class="plan-name">Dedicado Plus</li>
-                <li>10GB de espaço</li>
+                <li>10GB SSD</li>
                 <li>10 Subdomínios</li>
-                <li>100 contas de e-mail</li>
+                <li>100 E-mails</li>
                 <li>C-panel</li>
-                <li>Suporte 24/7</li>
-                <li class="plan-btn recommended">Saber mais</li>
+                <li>SSL Grátis</li>
+                <li><button class="plan-btn recommended" onclick="showPlanDetails('Dedicado Plus')">Saber mais</button></li>
               </ul>
             </div>
+
             <!-- Plano Cloud -->
             <div class="plan">
               <ul>
                 <li class="price">R$100/mês</li>
                 <li class="plan-name">Cloud</li>
-                <li>20GB de espaço</li>
+                <li>20GB SSD</li>
                 <li>20 Subdomínios</li>
-                <li>200 contas de e-mail</li>
+                <li>200 E-mails</li>
                 <li>C-panel</li>
-                <li>Suporte 24/7</li>
-                <li class="plan-btn">Saber mais</li>
+                <li>CDN Integrado</li>
+                <li><button class="plan-btn" onclick="showPlanDetails('Cloud')">Saber mais</button></li>
               </ul>
             </div>
           </div>
         </section>
-        <!-- Seção de busca de domínio -->
+
+        <!-- Seção Domínio -->
         <section class="searchdomain-container">
-          <h2>Qual domínio você quer para o seu site?</h2>
-          <p>Verifique se o domínio está disponível</p>
+          <h2>Verificar Domínio</h2>
+          <p>Confira a disponibilidade do seu domínio</p>
           <form>
-            <!-- Campo para digitar o domínio desejado -->
-            <input
-              type="text"
-              name="domain"
-              id="domain"
-              placeholder="Digite o domínio desejado"
+            <input 
+              type="text" 
+              placeholder="exemplo: seudominio.com" 
+              id="domainInput"
             />
-            <!-- Botão para submeter a busca -->
-            <input type="submit" value="Procurar domínio" />
+            <input 
+              type="submit" 
+              value="Verificar" 
+              onclick="checkDomain(event)"
+            />
           </form>
         </section>
-        <!-- Seção de contato -->
-        <section class="contact-container">
-          <h2>Mande uma mensagem</h2>
-          <p>
-            Envie a sua mensagem, em até 4 horas um especialista entrará em
-            contato
-          </p>
-          <form>
-            <!-- Campo para nome do usuário -->
-            <input type="text" name="name" id="name" placeholder="Seu nome" />
-            <!-- Campo para e-mail do usuário -->
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Seu e-mail"
+
+        <!-- Seção Contato -->
+        <section class="contact-container" id="contato">
+          <h2>Fale Conosco</h2>
+          <form id="contactForm">
+            <input 
+              type="text" 
+              placeholder="Seu nome" 
+              id="name" 
+              required
             />
-            <!-- Área de texto para mensagem ou descrição do projeto -->
+            <input 
+              type="email" 
+              placeholder="Seu e-mail" 
+              id="email" 
+              required
+            />
             <textarea
-              name="message"
+              placeholder="Descreva suas necessidades..."
               id="message"
-              placeholder="Descreva o que você precisa ou o seu projeto..."
             ></textarea>
-            <!-- Botão para enviar a mensagem -->
-            <input type="submit" value="Enviar" />
+            <button type="submit">Enviar Mensagem</button>
           </form>
         </section>
       </main>
-      <!-- Rodapé da página -->
+
       <footer>
-        <p>MIHost @ 2025</p>
+        <p>MIHOST @ 2024 - Projeto Educacional</p>
       </footer>
     </div>
+
+    <!-- Scripts de Interatividade -->
+    <script>
+      // Função para os botões "Saber mais"
+      function showPlanDetails(planName) {
+        alert(`Detalhes do plano ${planName}:\n\n(Esta funcionalidade está em desenvolvimento)`);
+      }
+
+      // Simulação de verificação de domínio
+      function checkDomain(e) {
+        e.preventDefault();
+        const domain = document.getElementById('domainInput').value;
+        if(domain) {
+          alert(`Domínio "${domain}" está ${Math.random() > 0.5 ? 'disponível! 🎉' : 'indisponível 😢'}`);
+        }
+      }
+
+      // Validação básica do formulário
+      document.getElementById('contactForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Mensagem enviada com sucesso! Entraremos em contato em até 2 horas.');
+        e.target.reset();
+      });
+    </script>
   </body>
 </html>
