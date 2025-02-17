@@ -97,7 +97,7 @@ nav {
 /* ------------------------- */
 /* Define o estilo da seção principal com imagem de fundo, cobrindo toda a área e centralizada */
 .main-banner {
-    background-image: url("/img/background.png");
+    background-image: url("img/background.png");
     background-size: cover;
     background-position: center;
     padding: 10rem 0;
