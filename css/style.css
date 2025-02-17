@@ -1,0 +1,477 @@
+/* ------------------------- */
+/*         Geral             */
+/* ------------------------- */
+/* Aplica um reset de margem, padding e define a fonte e o box-sizing para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    box-sizing: border-box;
+}
+
+/* Define a cor dos títulos (h1, h2 e h3) para branco, melhorando o contraste */
+h1,
+h2,
+h3 {
+    /* Alterado de #333 para branco para melhor contraste */
+    color: #ffffff;
+}
+
+/* Define a cor dos parágrafos para um cinza claro */
+p {
+    /* Alterado de #70747a para um cinza claro */
+    color: #d1d5db;
+}
+
+/* ------------------------- */
+/*         Navbar            */
+/* ------------------------- */
+/* Estiliza o container da navbar com largura total, altura fixa, fundo azul profundo e padding lateral */
+.navbar-container {
+    width: 100%;
+    height: 80px;
+    /* Alterado de #232a31 para um azul profundo */
+    background-color: #3A3F9F;
+    padding: 0 2rem;
+}
+
+/* Define a posição relativa para o elemento nav, permitindo posicionamentos absolutos de seus filhos */
+nav {
+    position: relative;
+}
+
+/* Estiliza o logo definindo seu tamanho e margem superior */
+.logo {
+    width: 50px;
+    margin-top: 15px;
+}
+
+/* Estiliza a lista de itens da navbar, posicionando-a à direita e centralizando verticalmente o texto */
+.navbar-items {
+    position: absolute;
+    right: 0;
+    height: 80px;
+    line-height: 80px;
+    margin: 0;
+    display: inline-block;
+}
+
+/* Cada item da lista da navbar é exibido em linha, com texto em maiúsculas e espaçamento à esquerda */
+.navbar-items li {
+    display: inline-block;
+    text-transform: uppercase;
+    margin-left: 25px;
+}
+
+/* Estiliza os links da navbar com cor branca, sem sublinhado e com transição suave */
+.navbar-items a {
+    /* Mantido branco */
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+/* Ao passar o mouse sobre os links, a cor muda para um tom suave de roxo claro */
+.navbar-items a:hover {
+    /* Alterado de #ccc para um tom suave de roxo claro */
+    color: #c5d1ff;
+}
+
+/* Estiliza o botão padrão utilizado na navbar (e possivelmente em outros lugares) */
+.default-btn {
+    padding: 15px 20px;
+    /* Alterado de #2cc76a para um roxo vibrante */
+    background-color: #6D2CFF;
+    border-radius: 5px;
+}
+
+/* Ao passar o mouse sobre o botão, a cor de fundo escurece um pouco e o texto permanece branco */
+.navbar-items .default-btn:hover {
+    /* Alterado de #22bb5f para um roxo um pouco mais escuro */
+    background-color: #5B22FF;
+    color: #fff;
+}
+
+/* ------------------------- */
+/*       Main Banner         */
+/* ------------------------- */
+/* Define o estilo da seção principal com imagem de fundo, cobrindo toda a área e centralizada */
+.main-banner {
+    background-image: url("/img/background.png");
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 0;
+}
+
+/* Estiliza o título e parágrafo do banner com cor branca, centralização, fonte em negrito e sombra para realce */
+.main-banner h1,
+.main-banner p {
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: #000 3px 2px 3px;
+}
+
+/* Define o tamanho do título do banner */
+.main-banner h1 {
+    font-size: 54px;
+}
+
+/* Define o tamanho do parágrafo do banner */
+.main-banner p {
+    font-size: 32px;
+}
+
+/* ------------------------- */
+/*        Services           */
+/* ------------------------- */
+/* Define o padding para a seção de serviços */
+.services-container {
+    padding: 5rem 0;
+}
+
+/* Utiliza flexbox para dispor os itens de serviços horizontalmente e centraliza a lista */
+.services-container ul {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Cada item de serviço é exibido com espaçamento e centralizado */
+.services-container li {
+    flex: 1 1 200px;
+    list-style: none;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Estiliza os ícones dos serviços, definindo o tamanho e margem inferior */
+.fas {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+/* Ícone de escudo (Segurança): altera a cor para um azul vibrante */
+.fa-shield-alt {
+    /* Alterado de #2cc76a para um azul */
+    color: #4A00E0;
+}
+
+/* Ícone de foguete (Performance): altera a cor para um roxo */
+.fa-rocket {
+    /* Alterado de #ef3f29 para um roxo */
+    color: #8E2DE2;
+}
+
+/* Ícone de comentários (Suporte 24/7): utiliza um tom diferenciado de roxo */
+.fa-comments {
+    /* Alterado de #ef8f29 para um tom de roxo diferenciado */
+    color: #7F00FF;
+}
+
+/* Define o espaçamento inferior para os títulos dos serviços */
+.services-container h3 {
+    margin-bottom: 25px;
+}
+
+/* Define o espaçamento das linhas nos parágrafos dos serviços */
+.services-container p {
+    line-height: 24px;
+}
+
+/* ------------------------- */
+/*    Prices and Plans       */
+/* ------------------------- */
+/* Estiliza a seção de planos e preços com padding e centralização */
+.pricing-container {
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+/* Define o tamanho do título da seção de preços */
+.pricing-container h2 {
+    font-size: 36px;
+}
+
+/* Define o tamanho do parágrafo da seção de preços */
+.pricing-container p {
+    font-size: 20px;
+}
+
+/* Container para os planos, utilizando flexbox para dispor os planos horizontalmente */
+.plans-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 50px auto 0;
+}
+
+/* Cada plano é estilizado individualmente com largura máxima e margem lateral */
+.plan {
+    flex: 1;
+    max-width: 275px;
+    margin: 0 20px;
+}
+
+/* Remove o padding padrão da lista dentro de cada plano */
+.plan ul {
+    padding: 0;
+}
+
+/* Estiliza cada item da lista dentro dos planos, definindo altura, alinhamento e cor de fundo */
+.plan li {
+    list-style: none;
+    height: 50px;
+    line-height: 50px;
+    /* Alterado de #e8e9ea para um tom bem sutil de azul claro */
+    background-color: #E8E9F2;
+    color: #333;
+}
+
+/* Estiliza o elemento que exibe o preço do plano, com formato circular e centralização */
+.plan .price {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    /* Alterado de #2cc76a para um azul vibrante */
+    background-color: #4A00E0;
+    color: #fff;
+    text-align: center;
+    line-height: 120px;
+    margin: 0 auto -50px;
+    font-size: 18px;
+    position: relative;
+}
+
+/* Define o estilo para o nome do plano, com texto em maiúsculas, negrito e fundo escuro */
+.plan .plan-name {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    /* Alterado de #202b34 para um azul-acinzentado escuro */
+    background-color: #2B2F4F;
+    padding: 50px 0;
+}
+
+/* Estiliza o botão do plano */
+.plan .plan-btn {
+    /* Alterado de #2cc76a para um roxo vibrante */
+    background-color: #6D2CFF;
+    color: #fff;
+    font-size: 24px;
+    height: 75px;
+    line-height: 75px;
+    cursor: pointer;
+}
+
+/* Destaca o plano recomendado com uma cor de fundo diferenciada */
+.plan .recommended {
+    /* Alterado de #f45c57 para um roxo */
+    background-color: #8E2DE2;
+}
+
+/* ------------------------- */
+/*      Search Domain        */
+/* ------------------------- */
+/* Estiliza a seção de busca de domínio com fundo azul profundo e centralização */
+.searchdomain-container {
+    /* Alterado de #34454e para um azul profundo */
+    background-color: #3A3F9F;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+/* Define o estilo do título da seção de busca de domínio */
+.searchdomain-container h2 {
+    color: #fff;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+/* Define o estilo do parágrafo na seção de busca de domínio */
+.searchdomain-container p {
+    /* Alterado de #d5d5d5 para um cinza claro */
+    color: #d1d5db;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+/* Estiliza os inputs dentro da seção de busca, centralizando-os */
+.searchdomain-container input {
+    display: block;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+/* Campo de texto para digitar o domínio desejado */
+.searchdomain-container input[type="text"] {
+    width: 60%;
+    padding: 20px;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+/* Estiliza o botão de submeter a busca de domínio */
+.searchdomain-container input[type="submit"] {
+    /* Alterado de #2cc76a para um roxo vibrante */
+    background-color: #6D2CFF;
+    padding: 15px 30px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* Efeito hover para o botão de busca de domínio */
+.searchdomain-container input[type="submit"]:hover {
+    opacity: 1;
+}
+
+/* ------------------------- */
+/*      Contact Form         */
+/* ------------------------- */
+/* Estiliza a seção de formulário de contato com centralização e padding */
+.contact-container {
+    text-align: center;
+    padding: 5rem 0 2rem 0;
+}
+
+/* Define o estilo do título do formulário de contato */
+.contact-container h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+/* Define o estilo do parágrafo explicativo no formulário de contato */
+.contact-container p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+/* Estiliza os inputs e a textarea do formulário de contato com largura, padding e borda */
+.contact-container input,
+.contact-container textarea {
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 0 10px 20px;
+}
+  
+/* Especifica o estilo da textarea, definindo tamanho e centralizando-a */
+.contact-container textarea {
+    display: block;
+    margin: 0 auto 20px;
+    width: 470px;
+    height: 150px;
+}
+  
+/* Estiliza o botão de envio do formulário de contato */
+.contact-container input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    /* Alterado de #2cc76a para um roxo vibrante */
+    background-color: #6D2CFF;
+    color: #fff;
+    cursor: pointer;
+}
+  
+/* ------------------------- */
+/*         Footer            */
+/* ------------------------- */
+/* Estiliza o rodapé com centralização, fonte em negrito e margens */
+footer {
+    text-align: center;
+    font-weight: bold;
+    margin: 50px 0 100px;
+}
+  
+/* ------------------------- */
+/*       Responsividade      */
+/* ------------------------- */
+
+/* Estilos para telas de small laptops (máximo 1100px de largura) */
+@media (max-width: 1100px) {
+    .plans-container {
+      width: 95%;
+    }
+  
+    .plan {
+      margin: 0 5px;
+    }
+}
+  
+/* Estilos para tablets (máximo 900px de largura) */
+@media (max-width: 900px) {
+    .main-banner p {
+      padding: 0 6rem;
+    }
+  
+    .searchdomain-container {
+      padding: 2rem 4rem;
+    }
+}
+  
+/* Estilos para celulares (máximo 576px de largura) */
+@media (max-width: 576px) {
+    /* Impede o overflow horizontal */
+    html,
+    body {
+      overflow-x: hidden;
+    }
+  
+    /* Reduz o tamanho da fonte e o espaçamento dos itens da navbar */
+    .navbar-items li {
+      font-size: 12px;
+      margin-left: 10px;
+    }
+  
+    /* Reduz o padding do parágrafo do banner */
+    .main-banner p {
+      padding: 0 2rem;
+    }
+  
+    /* Altera a direção dos itens dos serviços para coluna */
+    .services-container ul {
+      flex-direction: column;
+    }
+  
+    /* Organiza os planos em coluna e ajusta os espaçamentos */
+    .plans-container {
+      flex-direction: column;
+      width: 100%;
+      padding: 0 2rem;
+    }
+  
+    /* Cada plano ocupa a largura total com margem inferior */
+    .plan {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    /* Ajusta o tamanho do título da seção de busca de domínio */
+    .searchdomain-container h2 {
+      font-size: 28px;
+    }
+  
+    /* Faz o campo de texto da busca ocupar 100% da largura */
+    .searchdomain-container input[type="text"] {
+      width: 100%;
+    }
+  
+    /* Ajusta o padding da seção de contato */
+    .contact-container {
+      padding: 3rem 2rem;
+    }
+  
+    /* Faz os inputs e textarea do contato ocupar 100% da largura e ajusta margens */
+    .contact-container input,
+    .contact-container textarea {
+      width: 100%;
+      margin: 10px 0;
+    }
+}
