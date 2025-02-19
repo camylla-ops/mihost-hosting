@@ -4,6 +4,7 @@
 [![GitHub Pages](https://img.shields.io/badge/View-Live%20Demo-brightgreen)](https://camylla-ops.github.io/mihost-hosting)
 
 MIHOST é um projeto de site de hospedagem web, desenvolvido para explorar conceitos de design responsivo e estruturação semântica de HTML e CSS. Ele oferece uma experiência intuitiva para visualizar planos de hospedagem e verificar disponibilidade de domínios.
+Originalmente desenvolvido sem JavaScript, o projeto evoluiu para incluir interatividade, proporcionando uma experiência mais dinâmica aos usuários.
 
 ![Screenshot do MIHOST](/img/screenshot.png)
 
